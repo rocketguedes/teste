@@ -1,0 +1,14 @@
+name: Print Environment Variables
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Print environment variables
+      run: printenv
